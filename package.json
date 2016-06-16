@@ -1,0 +1,49 @@
+{
+  "name": "md-article",
+  "version": "1.0.0",
+  "description": "Extract data from markdown article",
+  "main": "index.es5.js",
+  "scripts": {
+    "coverage": "babel-node ./node_modules/.bin/isparta cover _mocha index.js -- --compilers js:babel-core/register",
+    "precoveralls": "npm run coverage",
+    "coveralls": "coveralls < coverage/lcov.info",
+    "test": "mocha --require babel-core/register",
+    "tdd": "npm test -- --watch",
+    "transpile": "babel index.js > index.es5.js",
+    "prepublish": "npm run transpile",
+    "postpublish": "rm *.es5.js && git push --follow-tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/greybax/md-article.git"
+  },
+  "keywords": [
+    "md",
+    "markdown",
+    "commonmark",
+    "blog"
+  ],
+  "author": "Aleksandr Filatov <greybax@gmail.com> (https://alfilatov.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/greybax/md-article/issues"
+  },
+  "homepage": "https://github.com/greybax/md-article#readme",
+  "devDependencies": {
+    "assert": "*",
+    "babel-cli": "^6.10.1",
+    "babel-core": "^6.9.1",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-es2015": "^6.9.0",
+    "coveralls": "*",
+    "isparta": "*",
+    "mocha": "*"
+  },
+  "dependencies": {
+    "md-content": "^1.0.1",
+    "get-md-date": "^1.0.1",
+    "get-md-desc": "^1.0.1",
+    "get-md-image": "^1.0.2",
+    "get-md-title": "^1.0.3"
+  }
+}
