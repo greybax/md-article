@@ -12,6 +12,6 @@ export default (input, dateFormat, dateLocale) => {
   const dateText  = date && date.text;
   const desc      = getDesc(input, dateText);
   const image     = getImage(input);
-  const content   = getContent(input, [titleText, dateText]);
+  const content   = getContent(input);
   return { title, date, desc, image, content};
 };

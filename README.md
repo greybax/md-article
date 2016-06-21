@@ -89,6 +89,10 @@ One of 83 available in momentjs [locales][i18n], e.g. `en` or `fr`.
 * [get-md-image][get-md-image] — get image from markdown article
 * [md-content][md-content] — get content from markdown article
 
+## Roadmap
+
+Use ```remark``` instead of ```commonmark``` for all markdown helpers
+
 ## License
 
 MIT © [Aleksandr Filatov](https://alfilatov.com/)

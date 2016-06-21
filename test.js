@@ -4,7 +4,7 @@ import extract from './index';
 const input = `
 # title
 
-_24 july 2015_
+_20 June 2016_
 
 desc
 
@@ -12,7 +12,9 @@ desc
 
 content1
 
-content2`;
+content2
+
+## header2`;
 
 const article = extract(input, 'D MMMM YYYY', 'en');
 
@@ -20,7 +22,7 @@ it('title', () =>
   equal(article.title.text, 'title'));
 
 it('date', ()=>
-  equal(article.date.text,  '24 july 2015'));
+  equal(article.date.text,  '20 June 2016'));
 
 it('desc', ()=>
   equal(article.desc.text,  'desc'));
@@ -28,12 +30,14 @@ it('desc', ()=>
 it('image', () =>
   equal(article.image.src,  'http://yo.io/'));
 
-// it('content', () =>
-//   equal(article.content.html,  `<p>desc</p>
-// <p><img src="http://yo.io/" alt="alt" /></p>
-// <p>content1</p>
-// <p>content2</p>
-// `));
+it('content', () =>
+  equal(article.content.html,
+`<p>desc</p>
+<p><img src="http://yo.io/" alt="alt"></p>
+<p>content1</p>
+<p>content2</p>
+<h2>header2</h2>
+`));
 
 it('invalid empty input', () =>
   equal(extract(), undefined));
@@ -55,10 +59,10 @@ it('invalid empty woDate desc', () =>
   equal(woDate.desc.text, 'desc'));
 
 it('invalid empty woDate content', () =>
-  equal(woDate.content.text, 'desc\n\ncontent'));
+  equal(woDate.content.text, 'desc\ncontent'));
 
 const woTitle = extract(`
-20 december 2015
+20 june 2016
 
 desc
 
@@ -68,13 +72,13 @@ it('invalid empty woTitle title', () =>
   equal(woTitle.title, undefined));
 
 it('invalid empty woTitle date', () =>
-  equal(woTitle.date.text, '20 december 2015'));
+  equal(woTitle.date.text, '20 june 2016'));
 
 it('invalid empty woTitle desc', () =>
   equal(woTitle.desc.text, 'desc'));
 
 it('invalid empty woTitle content', () =>
-  equal(woTitle.content.text, 'desc\n\ncontent'));
+  equal(woTitle.content.text, 'desc\ncontent'));
 
 const woTitleAndDate = extract(`
 desc
@@ -91,4 +95,4 @@ it('invalid empty woTitleAndDate desc', () =>
   equal(woTitleAndDate.desc.text, 'desc'));
 
 it('invalid empty woTitleAndDate content', () =>
-  equal(woTitleAndDate.content.text, 'desc\n\ncontent'));
+  equal(woTitleAndDate.content.text, 'desc\ncontent'));
