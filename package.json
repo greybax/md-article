@@ -1,6 +1,6 @@
 {
   "name": "md-article",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Extract data from markdown article",
   "main": "index.es5.js",
   "scripts": {
@@ -41,7 +41,7 @@
     "mocha": "*"
   },
   "dependencies": {
-    "md-content": "^1.0.4",
+    "md-content": "^1.0.5",
     "get-md-date": "^1.0.1",
     "get-md-desc": "^1.0.1",
     "get-md-image": "^1.0.2",
