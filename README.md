@@ -19,7 +19,7 @@ import extract from 'md-article';
 const input = `
 # title
 
-_24 july 2015_
+_24 june 2016_
 
 desc
 
@@ -31,7 +31,7 @@ content2`;
 
 const article = extract(input, 'D MMMM YYYY', 'en');
 article.title.text;    // title
-article.date.text;     // 24 july 2015
+article.date.text;     // 24 june 2016
 article.desc.text;     // desc
 article.image.src;     // http://yo.io/
 article.content.html;  // <p>desc</p>
@@ -52,9 +52,9 @@ I hope that all fields have self-explanatory names. Anyway, `desc` and `content`
 * date: `text`, `html`, `unix` and `moment`
 * image: `alt`, `src` and `html`
 
-Also everything in returned object has `node` field, which is an AST node, see [commonmark API][cmapi].
+Also everything in returned ```mdast``` object node, see [MDAST][mdast].
 
-[cmapi]: https://github.com/jgm/commonmark.js#usage
+[cmapi]: https://github.com/wooorm/mdast
 
 #### input
 
@@ -83,7 +83,7 @@ One of 83 available in momentjs [locales][i18n], e.g. `en` or `fr`.
 
 ## Related
 
-* [get-md-title][get-md-title] — get title from markdown article
+* [md-title][md-title] — get title from markdown article
 * [get-md-date][get-md-date] — get date from markdown article
 * [get-md-desc][get-md-desc] — get content from markdown article
 * [get-md-image][get-md-image] — get image from markdown article
@@ -110,8 +110,8 @@ MIT © [Aleksandr Filatov](https://alfilatov.com/)
 [depstat-image]: https://david-dm.org/greybax/md-article.svg?style=flat-square
 
 
-[get-md-title]: https://github.com/greybax/md-title
+[md-title]: https://github.com/greybax/md-title
 [get-md-date]: https://github.com/greybax/get-md-date
 [get-md-desc]: https://github.com/greybax/get-md-desc
 [get-md-image]: https://github.com/greybax/get-md-image
-[md-content]: https://github.com/greybax/get-md-content
+[md-content]: https://github.com/greybax/md-content
