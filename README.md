@@ -84,7 +84,7 @@ One of 83 available in momentjs [locales][i18n], e.g. `en` or `fr`.
 ## Related
 
 * [md-title][md-title] — get title from markdown article
-* [get-md-date][get-md-date] — get date from markdown article
+* [md-date][md-date] — get date from markdown article
 * [get-md-desc][get-md-desc] — get content from markdown article
 * [get-md-image][get-md-image] — get image from markdown article
 * [md-content][md-content] — get content from markdown article
@@ -111,7 +111,7 @@ MIT © [Aleksandr Filatov](https://alfilatov.com/)
 
 
 [md-title]: https://github.com/greybax/md-title
-[get-md-date]: https://github.com/greybax/get-md-date
+[md-date]: https://github.com/greybax/md-date
 [get-md-desc]: https://github.com/greybax/get-md-desc
 [get-md-image]: https://github.com/greybax/get-md-image
 [md-content]: https://github.com/greybax/md-content

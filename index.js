@@ -1,5 +1,5 @@
 import getTitle   from 'md-title';
-import getDate    from 'get-md-date';
+import getDate    from 'md-date';
 import getDesc    from 'get-md-desc';
 import getImage   from 'get-md-image';
 import getContent from 'md-content';
