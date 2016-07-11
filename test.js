@@ -27,9 +27,6 @@ it('date', ()=>
 it('desc', ()=>
   equal(article.desc.text,  'desc'));
 
-it('image', () =>
-  equal(article.image.src,  'http://yo.io/'));
-
 it('content', () =>
   equal(article.content.html,
 `<p>desc</p>
