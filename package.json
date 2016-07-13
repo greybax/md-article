@@ -1,6 +1,6 @@
 {
   "name": "md-article",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Extract data from markdown article",
   "main": "index.es5.js",
   "scripts": {
@@ -44,7 +44,7 @@
   "dependencies": {
     "md-content": "^1.0.7",
     "md-date": "^1.0.1",
-    "md-tags": "^1.2.3",
+    "md-tags": "^1.2.4",
     "md-title": "^1.0.2"
   }
 }

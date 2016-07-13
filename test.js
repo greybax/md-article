@@ -25,7 +25,7 @@ it('date', () =>
     equal(article.date.text, '20 June 2016'));
 
 it('tags', () =>
-    equal(article.tags.text, 'tag1 tag2 tag3;'));
+    equal(article.tags.text, 'tag1 tag2 tag3'));
 
 it('content', () =>
     equal(article.content.html,
@@ -52,7 +52,7 @@ it('invalid empty woDate date', () =>
     equal(woDate.date, undefined));
 
 it('invalid empty woDate tags', () =>
-    equal(woDate.tags.text, 'tag1 tag2 tag3;'));
+    equal(woDate.tags.text, 'tag1 tag2 tag3'));
 
 it('invalid empty woDate content', () =>
     equal(woDate.content.text, 'content'));
@@ -71,7 +71,7 @@ it('invalid empty woTitle date', () =>
     equal(woTitle.date.text, '20 june 2016'));
 
 it('invalid empty woTitle tags', () =>
-    equal(woTitle.tags.text, 'tag1 tag2 tag3;'));
+    equal(woTitle.tags.text, 'tag1 tag2 tag3'));
 
 it('invalid empty woTitle content', () =>
     equal(woTitle.content.text, 'content'));
@@ -88,7 +88,7 @@ it('invalid empty woTitleAndDate date', () =>
     equal(woTitleAndDate.date, undefined));
 
 it('invalid empty woTitleAndDate tags', () =>
-    equal(woTitleAndDate.tags.text, 'tag1 tag2 tag3;'));
+    equal(woTitleAndDate.tags.text, 'tag1 tag2 tag3'));
 
 it('invalid empty woTitleAndDate content', () =>
     equal(woTitleAndDate.content.text, 'content'));

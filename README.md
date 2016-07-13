@@ -32,7 +32,7 @@ content2`;
 const article = extract(input, 'D MMMM YYYY', 'en');
 article.title.text;    // title
 article.date.text;     // 24 june 2016
-article.tags.text;     // tag1 tag2 tag3;
+article.tags.text;     // tag1 tag2 tag3
 article.content.html;  // <p>desc</p>
                        // <p>content1</p>
                        // <p>content2</p>
