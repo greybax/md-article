@@ -21,6 +21,8 @@ const input = `
 
 _24 june 2016_
 
+#tag1 #tag2 #tag3;
+
 desc
 
 content1
@@ -30,7 +32,7 @@ content2`;
 const article = extract(input, 'D MMMM YYYY', 'en');
 article.title.text;    // title
 article.date.text;     // 24 june 2016
-article.desc.text;     // desc
+article.tags.text;     // tag1 tag2 tag3;
 article.content.html;  // <p>desc</p>
                        // <p>content1</p>
                        // <p>content2</p>
@@ -40,17 +42,18 @@ article.content.html;  // <p>desc</p>
 
 ### extract(input, dateFormat, dateLocale)
 
-Return object `{ title, date, desc, content }`.
+Return object `{ title, date, tags, content }`.
 
 I hope that all fields have self-explanatory names. 
-Anyway, `desc` and `content` should be explained further: `desc` — first paragraph without date, `content` input without title and date.  All the fields are objects with such fields:
+Anyway, `tags` and `content` should be explained further: `desc` — paragrapgh with elements like ```#tag1 #tag2;```, `content` input without title, tags and date.  All the fields are objects with such fields:
 
-* title, desc, content: `text` and `html`
+* title, content: `text` and `html`
+* tags: `list`, `text` and `html`
 * date: `text`, `html`, `unix` and `moment`
 
 Also everything in returned ```mdast``` object node, see [MDAST][mdast].
 
-[cmapi]: https://github.com/wooorm/mdast
+[mdast]: https://github.com/wooorm/mdast
 
 #### input
 
@@ -81,12 +84,12 @@ One of 83 available in momentjs [locales][i18n], e.g. `en` or `fr`.
 
 * [md-title][md-title] — get title from markdown article
 * [md-date][md-date] — get date from markdown article
-* [get-md-desc][get-md-desc] — get content from markdown article
+* [md-tags][md-tags] — get tags from markdown article
 * [md-content][md-content] — get content from markdown article
 
 ## Roadmap
 
-Use ```remark``` instead of ```commonmark``` for all markdown helpers
+- [x] ```remark``` instead of ```commonmark``` for all markdown helpers
 
 ## License
 
@@ -107,5 +110,5 @@ MIT © [Aleksandr Filatov](https://alfilatov.com/)
 
 [md-title]: https://github.com/greybax/md-title
 [md-date]: https://github.com/greybax/md-date
-[get-md-desc]: https://github.com/greybax/get-md-desc
+[md-tags]: https://github.com/greybax/md-tags
 [md-content]: https://github.com/greybax/md-content
