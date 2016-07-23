@@ -32,8 +32,8 @@ it('content', () =>
 `<p><img src="http://yo.io/" alt="alt"></p>
 <p>content1</p>
 <p>content2</p>
-<h2>header2</h2>
-`));
+<h2>header2</h2>`
+));
 
 it('invalid empty input', () =>
     equal(extract(), undefined));
